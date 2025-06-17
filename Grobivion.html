@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenue sur Grobivion</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('image.jpg'); /* Assurez-vous que le nom de l'image correspond */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            flex-direction: column;
+        }
+        .content {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #ff4444;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #ff6666;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Merci d'avoir écouté notre émission !</h1>
+        <h1>Bravo pour votre curiosité !</h1>
+        <button id="confettiButton">Lancer les confettis !</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script>
+        document.getElementById('confettiButton').addEventListener('click', function() {
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        });
+    </script>
+</body>
+</html>
